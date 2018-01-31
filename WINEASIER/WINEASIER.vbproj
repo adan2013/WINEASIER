@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF73CA45-6920-400D-B568-FCC906EF6A5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WINEASIER.My.MyApplication</StartupObject>
+    <RootNamespace>WINEASIER</RootNamespace>
+    <AssemblyName>WINEASIER</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WINEASIER.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WINEASIER.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mainico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APK02stoper.Designer.vb">
+      <DependentUpon>APK02stoper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK02stoper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK03minutnik.Designer.vb">
+      <DependentUpon>APK03minutnik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK03minutnik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK04alarm.Designer.vb">
+      <DependentUpon>APK04alarm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK04alarm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK04nowyalarm.Designer.vb">
+      <DependentUpon>APK04nowyalarm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK04nowyalarm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK05screenshot.Designer.vb">
+      <DependentUpon>APK05screenshot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK05screenshot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK05zrzut.Designer.vb">
+      <DependentUpon>APK05zrzut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK05zrzut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK06edycja.Designer.vb">
+      <DependentUpon>APK06edycja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK06edycja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK06notatnik.Designer.vb">
+      <DependentUpon>APK06notatnik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK06notatnik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK07diskeject.Designer.vb">
+      <DependentUpon>APK07diskeject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK07diskeject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK07edycja.Designer.vb">
+      <DependentUpon>APK07edycja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK07edycja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK07raport.Designer.vb">
+      <DependentUpon>APK07raport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK07raport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08edycja.Designer.vb">
+      <DependentUpon>APK08edycja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08edycja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08nowy.Designer.vb">
+      <DependentUpon>APK08nowy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08nowy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08odblokuj.Designer.vb">
+      <DependentUpon>APK08odblokuj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08odblokuj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08podglad.Designer.vb">
+      <DependentUpon>APK08podglad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08podglad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08sejfhasel.Designer.vb">
+      <DependentUpon>APK08sejfhasel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08sejfhasel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK08zmiana.Designer.vb">
+      <DependentUpon>APK08zmiana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK08zmiana.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK09imageconverter.Designer.vb">
+      <DependentUpon>APK09imageconverter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK09imageconverter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK10audioconverter.Designer.vb">
+      <DependentUpon>APK10audioconverter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK10audioconverter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK10progress.Designer.vb">
+      <DependentUpon>APK10progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK10progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK11progress.Designer.vb">
+      <DependentUpon>APK11progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK11progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK11videoconverter.Designer.vb">
+      <DependentUpon>APK11videoconverter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK11videoconverter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK12pobieranie.Designer.vb">
+      <DependentUpon>APK12pobieranie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK12pobieranie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK12waluty.Designer.vb">
+      <DependentUpon>APK12waluty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK12waluty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13backup.Designer.vb">
+      <DependentUpon>APK13backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13przywroc.Designer.vb">
+      <DependentUpon>APK13przywroc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13przywroc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13rozmiar.Designer.vb">
+      <DependentUpon>APK13rozmiar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13rozmiar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13wpis.Designer.vb">
+      <DependentUpon>APK13wpis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13wpis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13wykonaj.Designer.vb">
+      <DependentUpon>APK13wykonaj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13wykonaj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK13zarzadzanie.Designer.vb">
+      <DependentUpon>APK13zarzadzanie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK13zarzadzanie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK14dodaj.Designer.vb">
+      <DependentUpon>APK14dodaj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK14dodaj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK14magazynstronwww.Designer.vb">
+      <DependentUpon>APK14magazynstronwww.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK14magazynstronwww.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK14modyfikuj.Designer.vb">
+      <DependentUpon>APK14modyfikuj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK14modyfikuj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK14przeniesdo.Designer.vb">
+      <DependentUpon>APK14przeniesdo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK14przeniesdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK15edycja.Designer.vb">
+      <DependentUpon>APK15edycja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK15edycja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK15info.Designer.vb">
+      <DependentUpon>APK15info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK15info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK15kalendarz.Designer.vb">
+      <DependentUpon>APK15kalendarz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK15kalendarz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK15kategorie.Designer.vb">
+      <DependentUpon>APK15kategorie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK15kategorie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK15zarzadzaj.Designer.vb">
+      <DependentUpon>APK15zarzadzaj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK15zarzadzaj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK16selektorzdjec.Designer.vb">
+      <DependentUpon>APK16selektorzdjec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK16selektorzdjec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK16zakoncz.Designer.vb">
+      <DependentUpon>APK16zakoncz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK16zakoncz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK17wylacznik.Designer.vb">
+      <DependentUpon>APK17wylacznik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK17wylacznik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK18colorpicker.Designer.vb">
+      <DependentUpon>APK18colorpicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK18colorpicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK18wynik.Designer.vb">
+      <DependentUpon>APK18wynik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK18wynik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APK19analizatordysku.Designer.vb">
+      <DependentUpon>APK19analizatordysku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APK19analizatordysku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aplikacje.Designer.vb">
+      <DependentUpon>aplikacje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="aplikacje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Class1.vb" />
+    <Compile Include="EncryptDecryptVB.vb" />
+    <Compile Include="errinfo.Designer.vb">
+      <DependentUpon>errinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="errinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFMPEGerror.Designer.vb">
+      <DependentUpon>FFMPEGerror.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FFMPEGerror.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="konfiguracja.Designer.vb">
+      <DependentUpon>konfiguracja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="konfiguracja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listapowiadomien.Designer.vb">
+      <DependentUpon>listapowiadomien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="listapowiadomien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuform.Designer.vb">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menuform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="modyfikacjawpisu.Designer.vb">
+      <DependentUpon>modyfikacjawpisu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modyfikacjawpisu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modyfikacjawpisu2.Designer.vb">
+      <DependentUpon>modyfikacjawpisu2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modyfikacjawpisu2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modyfikacjawpisu3.Designer.vb">
+      <DependentUpon>modyfikacjawpisu3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modyfikacjawpisu3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NIRCMDerror.Designer.vb">
+      <DependentUpon>NIRCMDerror.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NIRCMDerror.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notifyform.Designer.vb">
+      <DependentUpon>notifyform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="notifyform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ostrzezenie.Designer.vb">
+      <DependentUpon>ostrzezenie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ostrzezenie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="powiadomienie.Designer.vb">
+      <DependentUpon>powiadomienie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="powiadomienie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="START.Designer.vb">
+      <DependentUpon>START.vb</DependentUpon>
+    </Compile>
+    <Compile Include="START.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ustawienia.Designer.vb">
+      <DependentUpon>ustawienia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ustawienia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wyciszaniepow.Designer.vb">
+      <DependentUpon>wyciszaniepow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wyciszaniepow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wywolywaczform.Designer.vb">
+      <DependentUpon>wywolywaczform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wywolywaczform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zamkniecieprog.Designer.vb">
+      <DependentUpon>zamkniecieprog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zamkniecieprog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APK02stoper.resx">
+      <DependentUpon>APK02stoper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK03minutnik.resx">
+      <DependentUpon>APK03minutnik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK04alarm.resx">
+      <DependentUpon>APK04alarm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK04nowyalarm.resx">
+      <DependentUpon>APK04nowyalarm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK05screenshot.resx">
+      <DependentUpon>APK05screenshot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK05zrzut.resx">
+      <DependentUpon>APK05zrzut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK06edycja.resx">
+      <DependentUpon>APK06edycja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK06notatnik.resx">
+      <DependentUpon>APK06notatnik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK07diskeject.resx">
+      <DependentUpon>APK07diskeject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK07edycja.resx">
+      <DependentUpon>APK07edycja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK07raport.resx">
+      <DependentUpon>APK07raport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08edycja.resx">
+      <DependentUpon>APK08edycja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08nowy.resx">
+      <DependentUpon>APK08nowy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08odblokuj.resx">
+      <DependentUpon>APK08odblokuj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08podglad.resx">
+      <DependentUpon>APK08podglad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08sejfhasel.resx">
+      <DependentUpon>APK08sejfhasel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK08zmiana.resx">
+      <DependentUpon>APK08zmiana.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK09imageconverter.resx">
+      <DependentUpon>APK09imageconverter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK10audioconverter.resx">
+      <DependentUpon>APK10audioconverter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK10progress.resx">
+      <DependentUpon>APK10progress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK11progress.resx">
+      <DependentUpon>APK11progress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK11videoconverter.resx">
+      <DependentUpon>APK11videoconverter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK12pobieranie.resx">
+      <DependentUpon>APK12pobieranie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK12waluty.resx">
+      <DependentUpon>APK12waluty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13backup.resx">
+      <DependentUpon>APK13backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13przywroc.resx">
+      <DependentUpon>APK13przywroc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13rozmiar.resx">
+      <DependentUpon>APK13rozmiar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13wpis.resx">
+      <DependentUpon>APK13wpis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13wykonaj.resx">
+      <DependentUpon>APK13wykonaj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK13zarzadzanie.resx">
+      <DependentUpon>APK13zarzadzanie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK14dodaj.resx">
+      <DependentUpon>APK14dodaj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK14magazynstronwww.resx">
+      <DependentUpon>APK14magazynstronwww.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK14modyfikuj.resx">
+      <DependentUpon>APK14modyfikuj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK14przeniesdo.resx">
+      <DependentUpon>APK14przeniesdo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK15edycja.resx">
+      <DependentUpon>APK15edycja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK15info.resx">
+      <DependentUpon>APK15info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK15kalendarz.resx">
+      <DependentUpon>APK15kalendarz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK15kategorie.resx">
+      <DependentUpon>APK15kategorie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK15zarzadzaj.resx">
+      <DependentUpon>APK15zarzadzaj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK16selektorzdjec.resx">
+      <DependentUpon>APK16selektorzdjec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK16zakoncz.resx">
+      <DependentUpon>APK16zakoncz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK17wylacznik.resx">
+      <DependentUpon>APK17wylacznik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK18colorpicker.resx">
+      <DependentUpon>APK18colorpicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK18wynik.resx">
+      <DependentUpon>APK18wynik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APK19analizatordysku.resx">
+      <DependentUpon>APK19analizatordysku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aplikacje.resx">
+      <DependentUpon>aplikacje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="errinfo.resx">
+      <DependentUpon>errinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFMPEGerror.resx">
+      <DependentUpon>FFMPEGerror.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konfiguracja.resx">
+      <DependentUpon>konfiguracja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listapowiadomien.resx">
+      <DependentUpon>listapowiadomien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuform.resx">
+      <DependentUpon>menuform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modyfikacjawpisu.resx">
+      <DependentUpon>modyfikacjawpisu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modyfikacjawpisu2.resx">
+      <DependentUpon>modyfikacjawpisu2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modyfikacjawpisu3.resx">
+      <DependentUpon>modyfikacjawpisu3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NIRCMDerror.resx">
+      <DependentUpon>NIRCMDerror.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notifyform.resx">
+      <DependentUpon>notifyform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ostrzezenie.resx">
+      <DependentUpon>ostrzezenie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="powiadomienie.resx">
+      <DependentUpon>powiadomienie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="START.resx">
+      <DependentUpon>START.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ustawienia.resx">
+      <DependentUpon>ustawienia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wyciszaniepow.resx">
+      <DependentUpon>wyciszaniepow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wywolywaczform.resx">
+      <DependentUpon>wywolywaczform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zamkniecieprog.resx">
+      <DependentUpon>zamkniecieprog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\notifyicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\notifyicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\notifyicon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\wybr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\logocien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\logonapis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\logozwyk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\napiscien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\napiszwyk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\strz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ikonawineasier.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ikonawineasier2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apkico\ico17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grafiki wineasier\appall.png" />
+    <None Include="bin\Debug\grafiki wineasier\notif.png" />
+    <None Include="bin\Debug\grafiki wineasier\settings.png" />
+    <None Include="bin\Debug\grafiki wineasier\minimenuopen.png" />
+    <None Include="bin\Debug\grafiki wineasier\mininotif.png" />
+    <None Include="bin\Debug\grafiki wineasier\minisettings.png" />
+    <None Include="bin\Debug\grafiki wineasier\minishutdown.png" />
+    <None Include="bin\Debug\grafiki wineasier\minisleep.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn1.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn2.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn3.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn4.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn5.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn6.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn7.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn8.png" />
+    <None Include="bin\Debug\grafiki wineasier\screenbtn9.png" />
+    <None Include="bin\Debug\grafiki wineasier\emptyiconweb.png" />
+    <None Include="bin\Debug\grafiki wineasier\webdir.png" />
+    <None Include="bin\Debug\grafiki wineasier\wstep1.png" />
+    <None Include="bin\Debug\grafiki wineasier\wstep2.png" />
+    <None Include="bin\Debug\grafiki wineasier\wstep3.png" />
+    <None Include="bin\Debug\grafiki wineasier\miniallapp.png" />
+    <None Include="bin\Debug\apkico\ico18.png" />
+    <None Include="bin\Debug\apkico\ico19.png" />
+    <Content Include="mainico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
