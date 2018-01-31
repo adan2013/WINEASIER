@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:700|Roboto:500');
+
+HTML {
+    font-family: 'Roboto';
+}
+
+BODY {
+    margin: 0px;
+}
+
+.container {
+    width: 1000px;
+    margin: 30px auto 15px auto;
+    text-align: center;
+}
+
+.imgheader {
+    width: 512px;
+    margin-top: 30px;
+}
+
+.maintext {
+    color: #555555;
+    font-size: 36px;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    font-family: 'Roboto';
+}
+
+.btnlink {
+    display: inline-block;
+    margin: 15px;
+    font-size: 20px;
+    padding: 10px 35px 10px 35px;
+    text-decoration: none;
+    border: 2px #003AA6 solid;
+    border-radius: 10px;
+    color: #003AA6;
+    font-family: 'Times New Roman';
+    -webkit-transition: 0.5s;
+}
+
+.btnlink:hover {
+    background-color: #003AA6;
+    color: #fff;
+}
+
+.appcontainer {
+    width: 100%;
+}
+
+.appdiv {
+    width: 33%;
+    float: left;
+    margin-bottom: 60px;
+}
+
+.appname {
+    display: block;
+    font-family: 'Roboto';
+    font-size: 26px;
+    margin-top: 10px;
+    color: #555555;
+}
+
+.tytul {
+    letter-spacing: .4mm;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 2px #003AA6 solid;
+}
+
+.blok {
+    width: 700px;
+    margin: 30px auto 60px auto;
+    font-size: 24px;
+}
+
+.stopka {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 26px;
+    font-family: 'Orbitron';
+    color: #fff;
+    text-align: center;
+    background-color: #333333;
+}
