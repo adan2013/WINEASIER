@@ -25,3 +25,11 @@ Aby zainstalować aplikację WINEASIER należy wykonać następujące czynności
 
 ## Wygląd aplikacji
 Ponieżej przedstawiam dodatkowe zrzuty ekranu prezentujące działanie aplikacji:
+
+<img src="web/wineasier1.png" width="684px"></img>
+
+<img src="web/wineasier2.png"></img>
+
+<img src="web/wineasier3.png"></img>
+
+<img src="web/wineasier4.png"></img>
